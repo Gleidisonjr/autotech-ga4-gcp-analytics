@@ -10,6 +10,7 @@
 
 - [Visão geral](#visão-geral-do-projeto)
 - [O que foi entregue](#o-que-foi-entregue)
+- [Screenshots do projeto](#screenshots-do-projeto)
 - [Stack e arquitetura](#stack-e-arquitetura)
 - [Como executar](#como-executar)
 - [Estrutura do projeto](#estrutura-do-repositório)
@@ -51,6 +52,32 @@ Resumo do que está implementado e documentado neste repositório.
 | **Documentação** | 9 docs + guias | Contexto de negócio, plano GA4, taxonomia, checklist GTM/GA4, arquitetura GCP, modelagem, dicionário de dados, KPIs, roadmap, passo a passo do dashboard e perguntas de negócio |
 
 O dashboard final foca em **uma página Overview** com os principais KPIs e gráficos; a documentação inclui 12 perguntas de negócio com passo a passo para expansão (páginas Funil, Canais, Tempo até conversão).
+
+---
+
+## Screenshots do projeto
+
+Alguns registros do que foi implementado.
+
+### Dashboard (Looker Studio)
+
+![Dashboard Overview](screenshots/dashboard-overview.png)
+
+*Overview com KPIs (funil + receita) e gráficos: receita por dispositivo, tráfego por canal, receita por plano, sessões e leads no tempo.*
+
+### BigQuery — Datasets e camadas
+
+![BigQuery datasets](screenshots/bigquery-datasets.png)
+
+*Datasets raw, trusted e analytics no console BigQuery.*
+
+### ETL — Carregamento dos dados
+
+*(Opcional: adicione `screenshots/etl-terminal.png` com a saída do `python load_to_bigquery.py`.)*
+
+### BigQuery — Consultas (opcional)
+
+*(Opcional: adicione `screenshots/bigquery-editor.png` com um print do editor de consultas.)*
 
 ---
 
@@ -140,6 +167,7 @@ autotech-ga4-gcp-analytics/
 ├── LICENSE
 ├── .gitignore
 ├── requirements.txt
+├── screenshots/              # Prints para o README (dashboard, BigQuery, ETL)
 ├── data/                     # CSVs sintéticos
 │   ├── ga4_events_mock.csv
 │   ├── crm_leads.csv
@@ -220,11 +248,11 @@ Para criar o repositório no GitHub e enviar este projeto:
    git status   # Confira: config.yaml NÃO deve aparecer (está no .gitignore)
    git commit -m "feat: projeto completo AutoTech B2B Analytics - GA4, BigQuery, Looker Studio"
    git branch -M main
-   git remote add origin https://github.com/SEU_USUARIO/autotech-ga4-gcp-analytics.git
+   git remote add origin https://github.com/Gleidisonjr/autotech-ga4-gcp-analytics.git
    git push -u origin main
    ```
 
-   Substitua `SEU_USUARIO` pelo seu usuário do GitHub. Se o repositório for privado, o GitHub pode pedir autenticação (token ou SSH).
+   Se usar outro usuário, troque `Gleidisonjr` na URL. Se o repositório for privado, o GitHub pode pedir autenticação (token ou SSH).
 
 3. **Não commite** `etl/config.yaml` (contém seu `project_id`; já está no `.gitignore`). O `config.example.yaml` é versionado como modelo.
 
