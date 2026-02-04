@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Configuração sensível (nunca commitar credenciais)
+config.yaml
+*.json
+!config.example.yaml
+credentials*.json
+service-account*.json
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dados locais (opcional: descomente se não quiser versionar CSVs)
+# data/*.csv
+
+# Logs
+*.log
+logs/
+
+# Looker Studio (exports locais)
+*.lsreport
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testes
+.pytest_cache/
+.coverage
+htmlcov/

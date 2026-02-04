@@ -1,0 +1,7 @@
+# AutoTech B2B - ETL BigQuery
+# Python 3.9+
+
+google-cloud-bigquery>=3.11.0
+pyyaml>=6.0
+pandas>=2.0.0
+pandas-gbq>=0.26.1

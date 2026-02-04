@@ -1,0 +1,20 @@
+# Copie para config.yaml e preencha com seus valores.
+# Nunca commite config.yaml com credenciais.
+
+project_id: autotechb2b
+location: southamerica-east1
+
+dataset_raw: raw
+dataset_trusted: trusted
+dataset_analytics: analytics
+
+csv_paths:
+  ga4_events: ../data/ga4_events_mock.csv
+  crm_leads: ../data/crm_leads.csv
+  contracts: ../data/contracts.csv
+
+# Opcional: tabelas de destino (padrão: raw_ga4_events, raw_crm_leads, raw_contracts)
+table_names:
+  ga4_events: raw_ga4_events
+  crm_leads: raw_crm_leads
+  contracts: raw_contracts
